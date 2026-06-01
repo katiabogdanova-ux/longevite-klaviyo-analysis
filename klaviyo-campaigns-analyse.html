@@ -41,6 +41,19 @@ tfoot td:nth-child(-n+3){text-align:left;font-size:10px;letter-spacing:.1em;text
 .tags span.g{background:var(--gl);border-color:var(--green);color:var(--green)}
 footer{max-width:1220px;margin:36px auto 0;padding-top:16px;border-top:1px solid var(--hl);font-size:11px;color:var(--muted)}
 </style></head><body>
+<div id="pw-gate" style="position:fixed;inset:0;z-index:9999;background:#F3EEE4;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',system-ui,sans-serif">
+  <div style="background:#FAF6EE;border:1px solid #CFC4B3;padding:40px 48px;max-width:360px;width:90%;text-align:center">
+    <div style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#5C544D;margin-bottom:12px">LONGÉVITÉ PARIS</div>
+    <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:500;color:#1C1917;margin-bottom:24px">Accès restreint</div>
+    <input id="pw-input" type="password" placeholder="Mot de passe" style="width:100%;padding:10px 14px;border:1px solid #CFC4B3;background:#F3EEE4;font-family:inherit;font-size:14px;color:#1C1917;outline:none;margin-bottom:12px" onkeydown="if(event.key==='Enter')checkPw()">
+    <div id="pw-err" style="color:#9B2226;font-size:12px;min-height:16px;margin-bottom:10px"></div>
+    <button onclick="checkPw()" style="width:100%;padding:11px;background:#6B1F26;color:#FAF6EE;border:none;font-family:inherit;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;cursor:pointer">Accéder</button>
+  </div>
+</div>
+<script>
+(function(){if(sessionStorage.getItem('lv_auth')==='1'){document.getElementById('pw-gate').style.display='none'}})();
+function checkPw(){var v=document.getElementById('pw-input').value;if(v==='longevite2026'){sessionStorage.setItem('lv_auth','1');document.getElementById('pw-gate').style.display='none'}else{document.getElementById('pw-err').textContent='Mot de passe incorrect';document.getElementById('pw-input').value='';document.getElementById('pw-input').focus()}}
+</script>
 <div class="hd">
   <span class="brand">Longévité Paris · Klaviyo Analytics</span>
   <h1>Campagnes email <em>2026.</em></h1>
