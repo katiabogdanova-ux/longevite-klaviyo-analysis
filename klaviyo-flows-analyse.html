@@ -2,12 +2,13 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Longévité Paris — Analyse Klaviyo Flows · Déc 2025–Mai 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --cream: #F3EEE4; --paper: #FAF6EE; --ivory: #FBF8F1;
-  --burgundy: #6B1F26; --burgundy-deep: #4A1319;
+  --burgundy: #7A1F2B; --burgundy-deep: #4A1319;
   --ink: #1C1917; --graphite: #3B3530; --muted: #5C544D;
   --hairline: #CFC4B3; --hairline-soft: #E3DCCB;
   --gold: #B88A3E; --gold-soft: #D9B978;
@@ -71,6 +72,11 @@ td.cell-bad { background: var(--red-light); color: var(--red); font-weight: 500;
 .kpi span.good { background: var(--green-light); border-color: var(--green); color: var(--green); }
 
 footer { max-width: 1100px; margin: 48px auto 0; padding-top: 24px; border-top: 1px solid var(--hairline); font-size: 11px; color: var(--muted); letter-spacing: 0.1em; }
+@media (max-width: 700px) {
+  body { padding: 24px 16px; }
+  h1 { font-size: 32px; }
+  .cards { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
